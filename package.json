@@ -1,0 +1,34 @@
+{
+  "name": "nunjucks-tag-spaceless",
+  "version": "1.0.0",
+  "description": "Nunjucks tag to remove whitespace between HTML tags.",
+  "license": "MIT",
+  "homepage": "https://github.com/jbmoelker/nunjucks-tag-spaceless#readme",
+  "repository": "nunjucks-tag-spaceless",
+  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js | faucet"
+  },
+  "keywords": [
+    "nunjucks",
+    "tag",
+    "template",
+    "spaceless",
+    "whitespace",
+    "format",
+    "jinja",
+    "twig"
+  ],
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "nunjucks": "2.5.2",
+    "tape": "4.6.0"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "files": [
+    "index.js"
+  ]
+}
