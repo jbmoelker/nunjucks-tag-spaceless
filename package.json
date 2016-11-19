@@ -8,7 +8,10 @@
   "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js | faucet"
+    "test": "node test.js | faucet",
+    "coverage": "npm run coverage:generate && npm run coverage:report",
+    "coverage:generate": "istanbul cover tape -- test.js",
+    "coverage:report": "cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "nunjucks",
@@ -21,7 +24,9 @@
     "twig"
   ],
   "devDependencies": {
+    "coveralls": "2.11.15",
     "faucet": "0.0.1",
+    "istanbul": "0.4.5",
     "nunjucks": "2.5.2",
     "tape": "4.6.0"
   },
