@@ -1,6 +1,8 @@
 # Nunjucks tag `spaceless`
 
+[![nunjucks-tag-spaceless on npm](https://badge.fury.io/js/nunjucks-tag-spaceless.svg)](https://www.npmjs.com/package/nunjucks-tag-spaceless)
 [![Build Status](https://travis-ci.org/jbmoelker/nunjucks-tag-spaceless.svg?branch=master)](https://travis-ci.org/jbmoelker/nunjucks-tag-spaceless)
+[![Coverage Status](https://coveralls.io/repos/github/jbmoelker/nunjucks-tag-spaceless/badge.svg?branch=master)](https://coveralls.io/github/jbmoelker/nunjucks-tag-spaceless?branch=master)
 
 [Nunjucks](https://mozilla.github.io/nunjucks/) [tag](https://mozilla.github.io/nunjucks/templating.html#tags) to remove whitespace *between HTML tags*, not whitespace within HTML tags or whitespace in plain text.
 
