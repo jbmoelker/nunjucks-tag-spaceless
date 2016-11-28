@@ -1,5 +1,7 @@
 'use strict';
 
+var nunjucks = require( 'nunjucks' );
+
 // based on implementations in other engines
 // twig spaceless	https://github.com/twigphp/Twig/blob/f0a4fa/lib/Twig/Node/Spaceless.php#L19
 // swig spaceless 	https://github.com/paularmstrong/swig/blob/v1.4.2/lib/tags/spaceless.js
@@ -30,10 +32,17 @@ module.exports = function SpacelessExtension() {
 		return new nodes.CallExtension(this, 'run', args, [body]);
 	};
 
-	this.run = function(context, body) {
-		return body()
+	this.run = function(context) {
+		var args = Array.prototype.slice.call( arguments, 1 );
+
+		var body = args.pop();
+		var params = args.pop();
+
+		var result = body()
 			.replace(WHITESPACE_AT_START, '')
 			.replace(WHITESPACE_BETWEEN_TAGS, '><')
 			.replace(WHITESPACE_AT_END, '');
+
+		return ( params && params.safe === true ) ? new nunjucks.runtime.SafeString( result ) : result;
 	};
 };
